@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>ECharts Test 1</title>
+    <script src='echarts.common.min.js'></script>
+</head>
+
+<body>
+
+    <!-- 这里我们演示如何创建一个直方图 -->
+    <!-- 1.准备容器 -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+
+    <script type="text/javascript">
+        // 2.初始化实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 3.指定图表配置项和数据
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['一月', '二月', '三月', '四月', '五月', '六月']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [800, 600, 901, 1234, 1290, 1330, 1620],
+                type: 'bar'
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
